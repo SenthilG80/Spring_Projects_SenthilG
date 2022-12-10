@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- place configuration details here -->
+ <bean id="ldt" class="java.time.LocalDateTime" factory-method="now" />
+<!-- <bean id="dt" class="java.util.Date"/>-->
+ <bean id="ldt1" class="java.time.LocalDateTime" factory-method="of">
+  <constructor-arg name="year" value="1998"/>
+  <constructor-arg name="month" value="1"/>
+  <constructor-arg name="dayOfMonth" value="9"/>
+  <constructor-arg name="hour" value="12"/>
+  <constructor-arg name="minute" value="45"/>
+  </bean>
+ <!--  <bean id="dt" class="java.util.Date">
+  <constructor-arg name="year" value="120"/>
+  <constructor-arg name="month" value="10"/>
+  <constructor-arg name="date" value="20"/>
+ </bean> -->
+  <context:component-scan base-package="com.nt.sbeans"/>
+ </beans>
